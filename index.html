@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Es6 Module Loader</title>
+  <script src="es6-module-loader-dev.js"></script>
+  <script>
+    System.paths.babel = 'browser.min.js';
+    System.transpiler = 'babel';
+  </script>
+  <script type='module'>
+    import {Person} from 'person.js';
+
+    let person = new Person('John', 'Doe');
+
+    alert(person.greet('Jim'));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
